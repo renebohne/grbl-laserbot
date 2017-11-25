@@ -12,6 +12,7 @@ Upload the sketch.
 # Configuration
 
 The following configuration is used and you can find it in the file laserbot.nc in this repository:
+```
 $0=10 (Step pulse time)
 $1=255 (Step idle delay)
 $2=0 (Step pulse invert)
@@ -46,20 +47,31 @@ $122=0.028 (Z-axis acceleration)
 $130=350.000 (X-axis maximum travel)
 $131=350.000 (Y-axis maximum travel)
 $132=200.000 (Z-axis maximum travel)
+```
 
 # Usage with lasergrbl
 
 Install from http://lasergrbl.com
 Select the right serial port and upload the settings from laserbot.nc from this repository.
 You can now send your gcode to your laserbot. For a first test, feel free to use rectangle.gcode from this repository.
+For my logic, I use the following preamble in my gcode:
+```
+$H
+G92 X320 Y0
+M5
+G0 X0 Y0
+G28.1
+```
 
 # Usage with Visicut
 
 Download from http://www.visicut.org
 Select example settings or keep your current settings.
 More details will follow. In general, you need to use the generic grbl driver from visicut and add the following preamble:
+```
 $H
 G92 X320 Y0
 M5
 G0 X0 Y0
 G28.1
+```
