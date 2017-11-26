@@ -82,9 +82,9 @@ void spindle_set_speed(uint16_t pwm_value)
 
 
 // Called by spindle_set_state() and step segment generator. Keep routine small and efficient.
-uint16_t spindle_compute_pwm_value(float rpm) // Mega2560 PWM register is 16-bit.
+uint8_t spindle_compute_pwm_value(float rpm) // Mega2560 Timer2 PWM register is 8-bit.
 {
-  uint16_t pwm_value;
+  uint8_t pwm_value;
   rpm *= (0.010*sys.spindle_speed_ovr); // Scale by spindle speed override value.
   // Calculate PWM register value based on rpm max/min settings and programmed rpm.
   if ((settings.rpm_min >= settings.rpm_max) || (rpm >= settings.rpm_max)) {
