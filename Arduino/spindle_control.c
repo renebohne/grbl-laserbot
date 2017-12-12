@@ -75,6 +75,7 @@ void spindle_stop()
 // and stepper ISR. Keep routine small and efficient.
 void spindle_set_speed(uint8_t pwm_value)
 {
+
   SPINDLE_OCR_REGISTER = pwm_value; // Set PWM output level.
   if (pwm_value == SPINDLE_PWM_OFF_VALUE) {
     //SPINDLE_TCCRA_REGISTER &= ~(1<<SPINDLE_COMB_BIT); // Disable PWM. Output voltage is zero.
