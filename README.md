@@ -93,8 +93,8 @@ More information here: (https://github.com/LaserWeb/LaserWeb4)[https://github.co
 
 ```									
 Steppers												
-Port1			Port2			Port3			Port4		
-Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#
+ Port1			Port2			Port3			Port4		
+Function Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#
 Dir	D11	PB5	24	D7	PH4	16	D6	PH3	15	D4	PG5	1
 Step	D12	PB6	25	D8	PH5	17	D9	PH6	18	D5	PE3	5
 Sleep	D18	PD3	46	D19	PD2	45	D3	PE5	7	D2	PE4	6
