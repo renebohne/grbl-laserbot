@@ -14,7 +14,7 @@ Upload the sketch.
 # Configuration
 
 
-The axis that carries the laser is the y-axis. The other axis is the x-axis. Make sure, that the endstop, that the x-axis runs into is connected to the first "servo port" and the endstop for the y-axis is connected to the second "servo port". 
+The axis that carries the laser is the y-axis. The other axis is the x-axis. Make sure, that the endstop, that the x-axis runs into is connected to the first "servo port" and the endstop for the y-axis is connected to the second "servo port".
 
 
 The following configuration is used and you can find it in the file laserbot.nc in this repository:
@@ -72,3 +72,7 @@ Select example settings or keep your current settings.
 
 More details will follow. In general, you need to use the generic grbl driver from visicut.
 
+# LaserWeb
+
+I tested this firmware with LaserWeb4 and it does work!
+More information here: (https://github.com/LaserWeb/LaserWeb4)[https://github.com/LaserWeb/LaserWeb4]

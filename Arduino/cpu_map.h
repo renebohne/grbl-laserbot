@@ -184,6 +184,9 @@
 //#define SPINDLE_TCCRB_INIT_MASK (1<<CS22)
 // 488 Hz
 #define SPINDLE_TCCRB_INIT_MASK ((1<<CS22) | (1<<CS20))
+//MLaser uses : 488Hz
+//With S25 for weak preview this results in: 491mV input (10% duty cylce) -> output 10.83V
+
 
 
 #define SPINDLE_OCRA_REGISTER   OCR2A // 8-bit Fast PWM mode requires top reset value stored here.
