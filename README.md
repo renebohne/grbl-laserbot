@@ -56,6 +56,17 @@ $132=200.000 (Z-axis maximum travel)
 ```
 
 
+# General notes
+
+Max Feedrate: The laser can move up to 200mm per second = 12.000 mm per minute
+
+Engraving area: Up to 383mm×367mm
+
+1.6W 445nm blue-violet diode laser
+
+MegaPi uses	DRV8825		
+
+
 # Usage with lasergrbl
 
 Install from http://lasergrbl.com
@@ -76,3 +87,66 @@ More details will follow. In general, you need to use the generic grbl driver fr
 
 I tested this firmware with LaserWeb4 and it does work!
 More information here: (https://github.com/LaserWeb/LaserWeb4)[https://github.com/LaserWeb/LaserWeb4]
+
+
+# MegaPi Pin mapping
+
+```									
+Steppers												
+Port1			Port2			Port3			Port4		
+Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#	Arduino Pin	Pin Name	MCU Pin#
+Dir	D11	PB5	24	D7	PH4	16	D6	PH3	15	D4	PG5	1
+Step	D12	PB6	25	D8	PH5	17	D9	PH6	18	D5	PE3	5
+Sleep	D18	PD3	46	D19	PD2	45	D3	PE5	7	D2	PE4	6
+Reset	D31	PC6	59	D38	PD7	80	D49	PL0	35	A1	PF1	96
+MS1	D34	PC3	56	D37	PC0	53	D43	PL6	41	A4	PF4	93
+MS2	D33	PC4	57	D40	PG1	52	D47	PL2	37	A3	PF3	94
+MS3	D32	PC5	58	D41	PG0	51	D48	PL1	36	A2	PF2	95
+Enable	D35	PC2	55	D36	PC1	54	D42	PL7	42	A5	PF5	92
+
+Endstop X/1	A6	PF6	91									
+Endstop Y/2	A7	PF7	90									
+Endstop Z/3	A8	PK0	89									
+Endstop E/4	A9	PK1	88									
+A10	PK2	87									
+A11	PK3	86									
+A12	PK4	85									
+A13	PK5	84									
+A14	PK6	83									
+A15	PK7	82									
+Laser1 12V	D10	PB4	23	OC2A								
+Laser2 12V	A0	PF0	97									
+
+Header 2x2 P12												
+D16	PH1	13									
+D17	PH0	12									
+D21	PD0	43									
+D20	PD1	44									
+
+Header 5x2 P15												
+D39	PG2	70									
+D29	PA7	71									
+D27	PA5	73									
+D25	PA3	75									
+D23	PA0	77									
+D30	PC7	60									
+D28	PA6	72									
+D26	PA4	74									
+D24	PA2	76									
+D22	PJ7	78									
+
+Header 3x2 ICSP												
+D52											
+D50											
+D51											
+
+LED blue	D13	PB7	26									
+
+I2C												
+10k PullUp	D20	PD1	44									
+10k PullUp	D21	PD0	43									
+
+USB	UART 0	D0/D1										
+Raspi	UART 2	D16/D17										
+BLE	UART 3	D14/D15										
+```
