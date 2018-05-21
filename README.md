@@ -5,7 +5,7 @@ fork of grbl-mega RAMPS 1.4 and modified for Makeblock Laserbot with Mega Pi boa
 # Installation
 
 Connect the Mega Pi
-Start your Arduino IDE and open the grbl.ino file in the /Arduino subdirectory of this repostiory.
+Start your Arduino IDE and open the Arduino.ino file in the /Arduino subdirectory of this repostiory.
 
 Make sure that you selected the board "Arduno/Genuino Mega or Mega 2560" in your Arduino IDE and select the serial port that connects to your Mega Pi.
 
